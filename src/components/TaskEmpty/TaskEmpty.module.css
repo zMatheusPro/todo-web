@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.75rem;
+  padding: 4rem 1.5rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+}
+
+.container p {
+  color: var(--gray-300);
+}
+
+.container p strong {
+  font-weight: 700;
+}

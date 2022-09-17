@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "../../components/Header";
 import { Task } from "../../components/Task";
 import { TaskBar } from "../../components/TaskBar";
+import { TaskEmpty } from "../../components/TaskEmpty";
 import styles from "./home.module.css";
 
 interface Task {
@@ -76,14 +77,18 @@ export function HomePage() {
           </div>
 
           <div className={styles.taskList}>
-            {tasks.map((task) => (
-              <Task
-                key={task.id}
-                {...task}
-                handleDeleteTask={handleDeleteTask}
-                handleChangeTaskStatus={handleChangeTaskStatus}
-              />
-            ))}
+            {tasks.length > 0 ? (
+              tasks.map((task) => (
+                <Task
+                  key={task.id}
+                  {...task}
+                  handleDeleteTask={handleDeleteTask}
+                  handleChangeTaskStatus={handleChangeTaskStatus}
+                />
+              ))
+            ) : (
+              <TaskEmpty />
+            )}
           </div>
         </div>
       </div>
