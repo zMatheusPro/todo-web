@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  gap: 0.75rem;
+  padding: 1rem;
+
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  background: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+}
+
+.checkbox span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1rem;
+  height: 1rem;
+
+  background-color: var(--gray-500);
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+}
+
+.checkbox span:not(.active):hover {
+  border-color: var(--blue-dark);
+  background: rgba(var(--blue-dark-rgb), 0.2);
+}
+
+.checkbox span.active {
+  color: var(--gray-100);
+  font-size: 0.5rem;
+  background-color: var(--purple-dark);
+  border-color: var(--purple-dark);
+}
+
+.checkbox span.active:hover {
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+
+.taskText {
+  flex: 1;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--gray-100);
+}
+
+.deleteTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  margin-left: auto;
+
+  color: var(--gray-300);
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.deleteTask:hover {
+  background-color: var(--gray-400);
+  color: var(--danger);
+}

@@ -1,7 +1,11 @@
 import { useState } from "react";
 import styles from "./TaskBar.module.css";
 
-export function TaskBar() {
+interface ITaskBarProps {
+  handleAddTask: (task: string) => void;
+}
+
+export function TaskBar({ handleAddTask }: ITaskBarProps) {
   const [task, setTask] = useState("");
 
   const handleChangeTask = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,8 +19,7 @@ export function TaskBar() {
       return;
     }
 
-    console.log(task);
-
+    handleAddTask(task);
     setTask("");
   };
 

@@ -7,12 +7,14 @@
   --gray-500: #262626;
   --gray-600: #1a1a1a;
   --gray-700: #0d0d0d;
+  --danger: #e25858;
 
   /* Product Color */
   --purple: #8284fa;
   --purple-dark: #5e60ce;
   --blue: #4ea8de;
   --blue-dark: #1e6f9f;
+  --blue-dark-rgb: 30, 111, 159;
 }
 
 * {
@@ -37,17 +39,5 @@ body {
   .maxContainer {
     max-width: 100%;
     margin: 0 1rem;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  html {
-    font-size: 93.75%;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  html {
-    font-size: 87.5%;
   }
 }
