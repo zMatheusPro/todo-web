@@ -63,6 +63,11 @@
   color: var(--gray-100);
 }
 
+.taskText.completed {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
 .deleteTask {
   display: flex;
   align-items: center;

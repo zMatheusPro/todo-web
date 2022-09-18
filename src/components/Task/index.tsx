@@ -29,7 +29,7 @@ export function Task({
           dangerouslySetInnerHTML={{ __html: isCompleted ? "✓" : "" }}
         />
       </button>
-      <p className={styles.taskText}>{task}</p>
+      <p className={`${styles.taskText} ${isCompleted && styles.completed}`}>{task}</p>
       <button
         className={styles.deleteTask}
         onClick={() => {
